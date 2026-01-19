@@ -664,40 +664,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navUl = document.querySelector('.nav ul');
   
-  // ✅ FIX Safari: click + touchstart
-  function toggleMenu() {
+  // ✅ Funciona en TODOS: click + preventDefault
+  hamburger.addEventListener('click', (e) => {
+    e.preventDefault();
     navUl.classList.toggle('active');
-  }
+  });
   
-  hamburger.addEventListener('click', toggleMenu);
-  hamburger.addEventListener('touchstart', toggleMenu); // ← FIX iOS
-  
-  // Cierra al clickear enlace
+  // Cierra menú en enlaces
   navUl.querySelectorAll('a').forEach(link => {
-    ['click', 'touchstart'].forEach(event => {
-      link.addEventListener(event, () => {
-        navUl.classList.remove('active');
-      });
+    link.addEventListener('click', () => {
+      navUl.classList.remove('active');
     });
   });
   
   // Scroll suave
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    ['click', 'touchstart'].forEach(event => {
-      anchor.addEventListener(event, function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 });
 </script>
+
 
 
 
