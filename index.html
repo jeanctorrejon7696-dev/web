@@ -412,13 +412,28 @@
 }
 
 @media (max-width: 768px) {
+  .nav ul {
+    display: none; /* Oculto */
+    position: fixed;  /* ← FIXED Safari */
+    top: 100%;        /* ← Debajo header */
+    left: 0;
+    right: 0;
+    background: rgba(9, 2, 18, 0.98);
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 1000;    /* ← Encima todo */
+  }
+  
+  .nav ul.active {
+    display: flex;
+  }
+  
   .hamburger {
-    display: block; /* Solo en móvil */
+    z-index: 1001;    /* ← Hamburguesa encima */
+    pointer-events: auto; /* ← Fuerza clicks Safari */
   }
 }
-html {
-  scroll-behavior: smooth; /* Backup si JS falla */
-}
+
 
 /* Transición suave para header sticky */
 header {
@@ -699,6 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   
+
 
 
 
