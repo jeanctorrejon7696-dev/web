@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ZeroFix Antofagasta · Reparación y mantenimiento de computadores, notebooks y consolas</title>
+  <meta name="description" content="Servicio técnico en Antofagasta: mantenimiento, formateo, cambio de HDD a SSD, reparación de notebooks, PC y PS4. Diagnóstico sin costo, bajo condiciones. Te enviamos fotos y videos del trabajo.">
+  <meta name="theme-color" content="#f4f2ee">
+
+  <!-- Al compartir el link por WhatsApp/Facebook. Para que muestre imagen, agrega og:image con la URL ABSOLUTA de una foto -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="ZeroFix Antofagasta · Servicio técnico">
+  <meta property="og:description" content="Mantenimiento, formateo, upgrades y reparación de PC, notebooks y consolas. Con fotos y videos del trabajo.">
+  <!-- <meta property="og:image" content="https://TU-DOMINIO/imagenes/equipos/equipo-1.png"> -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="imagenes/fonts/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes/fonts/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagenes/fonts/favicon-16x16.png">
+  <link rel="manifest" href="imagenes/fonts/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Datos para Google (negocio local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ComputerRepair",
+    "name": "ZeroFix Antofagasta",
+    "description": "Mantenimiento, formateo, actualización de hardware y reparación de computadores, notebooks y consolas.",
+    "telephone": "+56955294505",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Antofagasta",
+      "addressCountry": "CL"
+    },
+    "openingHours": ["Mo-Fr 20:00-24:00", "Sa 17:00-24:00"],
+    "sameAs": [
+      "https://www.instagram.com/zerofix.afta",
+      "https://www.facebook.com/people/ZeroFix-Antofagasta/61586641997681/"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f4f2ee;
+      --paper: #ffffff;
+      --ink: #15171a;
+      --muted: #5c6168;
+      --line: #d8d4cb;
+      --accent: #e4572e;
+      --accent-dark: #bf431f;
+      --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+      --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 1.02rem;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .wrap { width: min(1080px, 100%); margin-inline: auto; padding-inline: 1.5rem; }
+
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+    .label {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { text-decoration: none; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; }
+    .brand span { font-family: var(--mono); font-weight: 400; font-size: 0.8rem; color: var(--muted); margin-left: 0.5rem; }
+    .nav ul { display: flex; gap: 1.6rem; list-style: none; }
+    .nav ul a { text-decoration: none; font-size: 0.93rem; color: var(--muted); padding: 0.3rem 0; border-bottom: 2px solid transparent; }
+    .nav ul a:hover { color: var(--ink); border-color: var(--accent); }
+    .menu-btn {
+      display: none; font: inherit; font-family: var(--mono); font-size: 0.85rem;
+      background: none; border: 1px solid var(--ink); padding: 0.4rem 0.8rem; cursor: pointer; color: var(--ink);
+    }
+
+    /* Botones */
+    .btn {
+      display: inline-block; font: inherit; font-weight: 600; font-size: 0.97rem;
+      padding: 0.85rem 1.5rem; border: 2px solid var(--ink);
+      text-decoration: none; cursor: pointer; transition: background 0.15s, color 0.15s;
+    }
+    .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+    .btn-link { padding-inline: 0; border: 0; border-bottom: 2px solid var(--ink); font-weight: 500; }
+    .btn-link:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* Hero */
+    .hero { padding: 4.5rem 0 4rem; }
+    .hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3.5rem; align-items: end; }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.7rem); line-height: 1.05;
+      letter-spacing: -0.03em; font-weight: 700; margin: 1rem 0 1.4rem;
+    }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero p.lead { color: var(--muted); max-width: 34rem; font-size: 1.1rem; margin-bottom: 2rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
+
+    .spec { background: var(--paper); border: 1px solid var(--ink); }
+    .spec-head { padding: 0.7rem 1.1rem; border-bottom: 1px solid var(--ink); background: var(--ink); color: var(--bg); }
+    .spec dl { padding: 0.4rem 1.1rem 0.6rem; }
+    .spec div { padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+    .spec div:last-child { border-bottom: 0; }
+    .spec dt { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .spec dd { font-weight: 500; }
+
+    /* Secciones */
+    section { padding: 4.5rem 0; border-top: 1px solid var(--line); }
+    .sec-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2.5rem; }
+    .sec-head h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -0.02em; line-height: 1.15; }
+
+    /* Servicios */
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; border-top: 1px solid var(--ink); }
+    .services li {
+      padding: 1.1rem 1rem 1.1rem 0; border-bottom: 1px solid var(--line);
+      display: flex; gap: 1rem; align-items: baseline;
+    }
+    .services .n { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); min-width: 1.6rem; }
+
+    /* Sobre mí */
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+    .about p { color: var(--muted); margin-bottom: 1rem; max-width: 34rem; }
+    .about p strong { color: var(--ink); }
+    /* Cuando tengas una foto tuya o de tu mesa de trabajo, descomenta esto en el HTML */
+
+    /* Trabajos */
+    .work { display: grid; grid-template-columns: 1.25fr 1fr; gap: 3rem; align-items: center; padding: 2.5rem 0; border-top: 1px solid var(--line); }
+    .work:first-of-type { border-top: 1px solid var(--ink); }
+    .work:nth-of-type(even) { grid-template-columns: 1fr 1.25fr; }
+    .work:nth-of-type(even) figure { order: 2; }
+    .work figure { background: #e7e4dc; border: 1px solid var(--line); }
+    .work img { width: 100%; height: auto; }
+    .work h3 { font-size: 1.4rem; letter-spacing: -0.015em; line-height: 1.2; margin: 0.5rem 0 0.8rem; }
+    .work p { color: var(--muted); }
+
+    /* Reseñas */
+    .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem 3.5rem; }
+    blockquote { border-left: 3px solid var(--accent); padding-left: 1.25rem; }
+    blockquote p { font-size: 1.05rem; margin-bottom: 0.8rem; }
+    blockquote footer { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+    blockquote footer strong { color: var(--ink); font-weight: 600; }
+    .more { margin-top: 2.5rem; }
+
+    /* Contacto */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+    .contact dl div { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .contact dl div:first-child { border-top: 1px solid var(--ink); }
+    .contact dt { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .contact dd a { text-decoration: none; border-bottom: 1px solid var(--accent); }
+    .contact dd a:hover { color: var(--accent); }
+    .social { margin-top: 1.5rem; display: flex; gap: 1.5rem; font-size: 0.95rem; }
+    .social a { text-decoration: none; border-bottom: 1px solid var(--ink); }
+    .social a:hover { color: var(--accent); border-color: var(--accent); }
+
+    form { display: grid; gap: 1.1rem; background: var(--paper); border: 1px solid var(--ink); padding: 1.8rem; }
+    form h3 { font-size: 1.15rem; }
+    label { display: block; font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.35rem; }
+    input, textarea {
+      width: 100%; font: inherit; padding: 0.7rem 0.8rem; color: var(--ink);
+      background: var(--bg); border: 1px solid var(--line); border-radius: 0;
+    }
+    input:focus, textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(228, 87, 46, 0.35); }
+    textarea { min-height: 120px; resize: vertical; }
+
+    /* Footer */
+    .site-footer { padding: 2rem 0; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid, .about, .contact, .quotes { grid-template-columns: 1fr; }
+      .hero-grid { gap: 2.5rem; }
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .work, .work:nth-of-type(even) { grid-template-columns: 1fr; gap: 1.5rem; }
+      .work:nth-of-type(even) figure { order: 0; }
+    }
+    @media (max-width: 720px) {
+      .menu-btn { display: block; }
+      .nav ul {
+        display: none; position: absolute; top: 64px; left: 0; right: 0;
+        flex-direction: column; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line);
+        padding: 0.5rem 1.5rem 1rem;
+      }
+      .nav ul.open { display: flex; }
+      .nav ul a { display: block; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+      .services { grid-template-columns: 1fr; }
+      .hero { padding-top: 2.5rem; }
+      section { padding: 3rem 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="brand">ZeroFix<span>Antofagasta</span></a>
+
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+
+    <nav aria-label="Principal">
+      <ul id="menu">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label">Servicio técnico · Antofagasta</p>
+        <h1>Reparación y mantenimiento de equipos, <em>con prueba de todo lo que se hace.</em></h1>
+        <p class="lead">
+          Computadores, notebooks, All-in-One, mini PC y consolas. Reviso el equipo, te explico qué tiene
+          y te mando fotos y videos del trabajo.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/56955294505" target="_blank" rel="noopener noreferrer">Pedir presupuesto por WhatsApp</a>
+          <a class="btn btn-link" href="https://www.instagram.com/zerofix.afta" target="_blank" rel="noopener noreferrer">Ver equipos reparados</a>
+        </div>
+      </div>
+
+      <aside class="spec" aria-label="Datos del servicio">
+        <p class="spec-head label" style="color: var(--bg);">Ficha del servicio</p>
+        <dl>
+          <div><dt>Diagnóstico</dt><dd>Sin costo, bajo condiciones</dd></div>
+          <div><dt>Horario</dt><dd>Lun–Vie 20:00–00:00<br>Sáb 17:00–00:00</dd></div>
+          <div><dt>Experiencia</dt><dd>Más de 7 años</dd></div>
+          <div><dt>Contacto</dt><dd>WhatsApp +56 9 5529 4505</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">01</span>
+        <h2>Qué hago</h2>
+      </div>
+      <ul class="services">
+        <li><span class="n">01</span> Mantenimiento preventivo y correctivo</li>
+        <li><span class="n">02</span> Formateos y optimización de software</li>
+        <li><span class="n">03</span> Actualización de HDD a SSD</li>
+        <li><span class="n">04</span> Instalación de hardware y programas</li>
+        <li><span class="n">05</span> Reparación y limpieza de consolas</li>
+        <li><span class="n">06</span> Armado de PC a pedido</li>
+        <li><span class="n">07</span> Mantenimiento de PS4</li>
+        <li><span class="n">08</span> Notebooks y All-in-One</li>
+        <li><span class="n">09</span> Sistemas arcade y diagnóstico</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sobre-mi">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">02</span>
+        <h2>Quién te atiende</h2>
+      </div>
+      <div class="about">
+        <div>
+          <p>
+            Soy <strong>Jean Torrejón</strong>, pero me conocen como <strong>Zero</strong>. Empecé en la
+            informática como pasatiempo y hace más de 7 años que trabajo arreglando equipos.
+          </p>
+          <p>
+            Cuando te entrego un equipo, ya viste qué tenía y qué se le hizo: por eso mando fotos y videos
+            de cada trabajo.
+          </p>
+        </div>
+        <div>
+          <p>
+            Hago formateos, mantenimientos, armado de computadores, instalación de hardware y software,
+            diagnósticos y sistemas arcade.
+          </p>
+          <!-- Aquí va una foto tuya o de tu mesa de trabajo:
+          <img src="imagenes/zero-taller.jpg" alt="Jean Torrejón en su mesa de trabajo" width="640" height="480" loading="lazy">
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabajos">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">03</span>
+        <h2>Trabajos reales</h2>
+      </div>
+
+      <article class="work">
+        <figure>
+          <img src="imagenes/equipos/equipo-1.png" alt="Equipo con formateo y upgrade de hardware" loading="lazy">
+        </figure>
+        <div>
+          <p class="label">Formateo + upgrade</p>
+          <h3>Un equipo lento que volvió a rendir</h3>
+          <p>
+            Lentitud por uso prolongado. Se instaló un SSD NVMe de 512 GB y se reinstaló Windows desde cero.
+            El cambio en velocidad es inmediato.
+          </p>
+        </div>
+      </article>
+
+      <article class="work">
+        <figure>
+          <img src="imagenes/equipos/equipo-2.jpg" alt="Mantenimiento completo de computador" loading="lazy">
+        </figure>
+        <div>
+          <p class="label">Mantenimiento completo</p>
+          <h3>Limpieza interna y pasta térmica</h3>
+          <p>
+            Limpieza profunda de componentes, retiro de polvo y cambio de pasta térmica para bajar
+            temperaturas y mejorar el rendimiento.
+          </p>
+        </div>
+      </article>
+
+      <article class="work">
+        <figure>
+          <img src="imagenes/equipos/equipo-3.jpg" alt="Mantenimiento de PlayStation 4" loading="lazy">
+        </figure>
+        <div>
+          <p class="label">Consola · PS4</p>
+          <h3>Una PS4 que dejó de apagarse</h3>
+          <p>
+            Limpieza completa, cambio de pasta térmica y thermal pads para evitar el sobrecalentamiento
+            y los apagones mientras juegas.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="resenas">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">04</span>
+        <h2>Lo que dicen los clientes</h2>
+      </div>
+
+      <div class="quotes">
+        <blockquote>
+          <p>Mi PC estaba lentísima, después del mantenimiento y cambio de disco el equipo vuela. Muy confiable y cumplió todas mis expectativas.</p>
+          <footer><strong>Saul Cordovez</strong> · PC Gamer</footer>
+        </blockquote>
+
+        <blockquote>
+          <p>Me dejó impecable el computador, explicó los problemas y envió videos del trabajo realizado. Excelente profesional.</p>
+          <footer><strong>Macarena Orellana</strong> · Notebook ASUS</footer>
+        </blockquote>
+
+        <blockquote>
+          <p>Me explicó detalladamente el problema y me dio una asesoría completa. Muy amable en todo momento, 10/10.</p>
+          <footer><strong>Susana Torres</strong> · Notebook HP G4</footer>
+        </blockquote>
+
+        <blockquote>
+          <p>Super atento, explica con imágenes y videos los procedimientos realizados. Muy recomendable.</p>
+          <footer><strong>Mega Tsu</strong> · PC Gamer</footer>
+        </blockquote>
+      </div>
+
+      <p class="more">
+        <a class="btn btn-link" href="https://search.google.com/local/writereview?placeid=ChIJ43M42zcrrpYRdRh24Cy9vzA" target="_blank" rel="noopener noreferrer">Dejar una reseña en Google</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">05</span>
+        <h2>Cuéntame qué le pasa a tu equipo</h2>
+      </div>
+
+      <div class="contact">
+        <div>
+          <dl>
+            <div><dt>WhatsApp</dt><dd><a href="https://wa.me/56955294505" target="_blank" rel="noopener noreferrer">+56 9 5529 4505</a></dd></div>
+            <div><dt>Ubicación</dt><dd>Antofagasta, Chile</dd></div>
+            <div><dt>Horario</dt><dd>Lunes a viernes 20:00–00:00<br>Sábado 17:00–00:00</dd></div>
+            <div><dt>Presupuesto</dt><dd>Diagnóstico y consultas sin costo, bajo condiciones.</dd></div>
+          </dl>
+          <div class="social">
+            <a href="https://www.instagram.com/zerofix.afta" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/people/ZeroFix-Antofagasta/61586641997681/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJ43M42zcrrpYRdRh24Cy9vzA" target="_blank" rel="noopener noreferrer">Google</a>
+          </div>
+        </div>
+
+        <form id="whatsapp-form">
+          <h3>Solicitar presupuesto</h3>
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Ej: Juan Pérez" required>
+          </div>
+          <div>
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="+56 9 1234 5678" required>
+          </div>
+          <div>
+            <label for="equipo">Equipo o marca</label>
+            <input id="equipo" name="equipo" type="text" placeholder="Ej: Notebook HP, PS4, PC gamer">
+          </div>
+          <div>
+            <label for="mensaje">Problema</label>
+            <textarea id="mensaje" name="mensaje" placeholder="¿Qué le pasa al equipo?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">© 2026 Jean Carlos Torrejón Orozco · ZeroFix Antofagasta</div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector(".menu-btn");
+    const menu = document.getElementById("menu");
+
+    const setMenu = open => {
+      menu.classList.toggle("open", open);
+      btn.setAttribute("aria-expanded", String(open));
+    };
+
+    btn.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+    document.getElementById("whatsapp-form").addEventListener("submit", e => {
+      e.preventDefault();
+      const v = id => document.getElementById(id).value.trim();
+      const text =
+        `Hola, quiero pedir presupuesto en ZeroFix.\n\n` +
+        `Nombre: ${v("nombre")}\n` +
+        `Teléfono: ${v("telefono")}\n` +
+        `Equipo: ${v("equipo") || "No especificado"}\n\n` +
+        `Problema:\n${v("mensaje")}`;
+      window.open(`https://wa.me/56955294505?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    });
+  });
+</script>
+
+</body>
+</html>
